@@ -13,6 +13,14 @@ hr{
     border-color: #113285 !important;
 }
 
+hr.hr-white{
+    border-color: lightblue !important;
+}
+
+p.black-paragraph{
+  color: black;
+}
+
 header {
   /*position: relative;*/
   /*width: 100%;*/
@@ -116,4 +124,12 @@ header {
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #4a77e8;
   }
+}
+
+a {
+  color: #113285;
+}
+a:hover,
+a:focus {
+  color: #4a77e8;
 }
