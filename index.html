@@ -94,7 +94,7 @@
             <h1 id="homeHeading"> AI for Soul of Eden </h1>
             <hr class="hr-white">
             <p> AI for Rayark's “Soul of Eden” <br/> GPU 2017 Final Project <br/> Team 1</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <a href="#intro" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
         </div>
     </div>
 </header>
@@ -102,24 +102,28 @@
 <section class="bg-primary" id="intro">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 ">
+            <p class="col-lg-4 text-center">
+                <img src="img/game.jpg" style="width:250px">
+            </p>
+
+            <div class="col-lg-8  ">
                 <h2 class="section-heading text-center">Introduction to Soul of Eden</h2>
                 <hr class="light">
                 <!--<p class="text-faded">-->
                 <h4 class="text-faded"> ． A real-time strategy mobile card game. <br></h4>
                 <h4 class="text-faded"> ． Use cards to destroy opposite’s castle. <br></h4>
-                <h4 class="text-faded"> ． Two main groups and over 150 cards <br></h4>
-                <font class="text-faded" color="gray">(containing heros, soldiers, buildings, and magic.) </font> <br>
+                <h4 class="text-faded"> ． Two main groups and over 150 cards. <br></h4>
+                <font class="text-faded" color="gray">(containing heroes, soldiers, buildings, and magic.) </font> <br>
                 <h4 class="text-faded"> ． Adopt their strategies for different kinds of situations and win the
                     battle.<br></h4>
-
-                <p class="text-center">For more details, please refer to <a
-                        href="https://www.rayark.com/g/soul_of_eden/"
-                        style="color: lightgrey; text-decoration: underline;;">Soul of Eden.</a></p>
-
-                <!--</p>-->
             </div>
+            <p class="text-right">For more details, please refer to <a
+                    href="https://www.rayark.com/g/soul_of_eden/"
+                    style="color: lightgrey; text-decoration: underline;;">Soul of Eden.</a>
+            </p>
         </div>
+
+
     </div>
 </section>
 
@@ -140,7 +144,7 @@
                 <font class="text-faded">(Simple AI: AI designed by statistics method.) </font>
             </div>
             <div class="col-lg-4">
-                <h4> AI can reinforce by self-playing </h4>
+                <h4> AI can reinforce by self-playing. </h4>
             </div>
 
         </div>
@@ -180,11 +184,6 @@
             <hr class="primary">
         </div>
     </div>
-
-
-    <p class="text-center">
-        <img src="img/game.jpg" style="width:250px">
-    </p>
 
     <div class="container">
         <div class="row">
@@ -228,7 +227,7 @@
                 <h4>
                     <b> Tank </b>
                 </h4>
-                <img src="img/a2.jpg" style="width:70px"> <br>
+                <img src="img/a2.jpg" style="width:100px"> <br>
                 <p>
                     621HP <br/>
                     <font color="#696969">
@@ -243,7 +242,7 @@
                 <h4>
                     <b>Archer</b>
                 </h4>
-                <img src="img/a3.jpg" style="width:70px"> <br>
+                <img src="img/a3.jpg" style="width:100px"> <br>
                 <p>
                     162HP <br><font color="#696969"> Medium attack damage <br> The main attacker in the game, <br>
                     usually protected by tanks</font>
@@ -254,7 +253,7 @@
                 <h4>
                     <b>Assassin</b>
                 </h4>
-                <img src="img/a1.jpg" style="width:70px"> <br>
+                <img src="img/a1.jpg" style="width:100px"> <br>
                 <p>
                     162HP <br><font color="#696969"> High attack damage <br> Assassinate enemy archers. </font>
                 </p>
@@ -327,14 +326,16 @@
         <div class="row">
             <h4><font color="#ffc0cb"> Problem 1 :</font> Lack of real-time observation </h4>
             <p class="text-faded">
-                &nbsp &nbsp The engine provided by Rayark can only output the battle field information after the whole game ends.
+                &nbsp &nbsp The engine provided by Rayark can only output the battle field information after the whole
+                game ends.
                 However, to train our AI by the battle field information, we need to have battle field information step
                 by step.
             </p>
 
             <h4><font color="#90ee90"> Solution: </font> Learn from acts of both sides </h4>
             <p class="text-faded">
-                &nbsp &nbsp The problem is fatal and cannot be solved since the problem comes from the Rayark engine. Therefore, we
+                &nbsp &nbsp The problem is fatal and cannot be solved since the problem comes from the Rayark engine.
+                Therefore, we
                 decide to modify our algorithm. Instead of training our AI by battle field information, we decide to
                 train our AI by the behaviors of both players. Since the behavior, such that the cards and the positions
                 each player decide, is obtainable step by step, the problem is avoided.
@@ -345,12 +346,14 @@
             <h4><font color="#ffc0cb"> Problem 2 :</font> Battle field </h4>
 
             <p class="text-faded">
-                &nbsp &nbsp The battle field is very large. There are about 10 millions $\times$ 10 millions positions in the
+                &nbsp &nbsp The battle field is very large. There are about 10 millions $\times$ 10 millions positions
+                in the
                 battle field, making the training very difficult.
             </p>
             <h4><font color="#90ee90"> Solution: </font> Discretization to the field </h4>
             <p class="text-faded">
-                &nbsp &nbsp To reduce the complexity of training, we divide the battle field into 50 ranges. Each player can put his
+                &nbsp &nbsp To reduce the complexity of training, we divide the battle field into 50 ranges. Each player
+                can put his
                 card on his own territory, which contains 25 ranges. By doing so, we largely reduce our training space
                 from 10 million $\times$ 10 million to 50.
             </p>
@@ -359,12 +362,14 @@
 
             <h4><font color="#ffc0cb"> Problem 3 :</font> Consider acts of both sides </h4>
             <p class="text-faded">
-                &nbsp &nbsp In a typical RNN model, it takes only one input (in one-hot form) and output the probabilities of
+                &nbsp &nbsp In a typical RNN model, it takes only one input (in one-hot form) and output the
+                probabilities of
                 next move. However, we would like to consider the opposite's move as well as our move in the same time.
             </p>
             <h4><font color="#90ee90"> Solution: </font> Mapping 2 inputs into a vector </h4>
             <p class="text-faded">
-                &nbsp &nbsp We solve the problem by mapping the 2 inputs into a vector which has the same shape as the output
+                &nbsp &nbsp We solve the problem by mapping the 2 inputs into a vector which has the same shape as the
+                output
                 vector. We build a one-layer NN to map the 2 inputs into a vector. Then, we can use the vector as our
                 input. More details are elaborated in the Model section.
             </p>
@@ -609,13 +614,15 @@
 
         <h4 style="color:darkblue"> ． Statistics Model v.s Random Model </h4>
         <p class="top15">
-            &nbsp &nbsp We let statistics model and random model play over 3,000 games and the statistics model have more than 80%
+            &nbsp &nbsp We let statistics model and random model play over 3,000 games and the statistics model have
+            more than 80%
             winning rate, meaning that it is superior than the random model very much. <br>
         </p>
 
         <h4 style="color:darkblue">． RNN Models v.s Statistics Model</h4>
         <p class="top15">
-            &nbsp &nbsp We let RNN models play with the statistics model. Both of the models choose the best behavior they
+            &nbsp &nbsp We let RNN models play with the statistics model. Both of the models choose the best behavior
+            they
             think as the decision,
             and therefore the game is deterministic. The result is that all of the RNN models defeat the statistics
             model, showing that RNN models are better than statistics model.
@@ -674,14 +681,15 @@
                 and the RNN models outperforms the statistics model.
             </p>
 
-            <h4 > ． rNN v1 ≈ rNN v2</h4>
+            <h4> ． rNN v1 ≈ rNN v2</h4>
             <p class="top15 text-faded">
                 &nbsp &nbsp Version 1 and version 2 RNN models have similar performance.
             </p>
 
-            <h4 > ． rNN 4 layers of cells < rNN 2 layers of cells </h4>
+            <h4> ． rNN 4 layers of cells < rNN 2 layers of cells </h4>
             <p class="top15 text-faded">
-                &nbsp &nbsp The model that uses 4 layers of cells leads to a lower loss than the model that uses 2 layers of cells.
+                &nbsp &nbsp The model that uses 4 layers of cells leads to a lower loss than the model that uses 2
+                layers of cells.
             </p>
 
         </div>
@@ -703,13 +711,15 @@
     <div class="container">
         <h4 style="color:darkblue">1. High quality training data </h4>
         <p class="top15">
-            &nbsp &nbsp Since we have some basic models now,we can use them to generate training data that has higher quality.
+            &nbsp &nbsp Since we have some basic models now, we can use them to generate training data that has higher
+            quality.
             We believe that the model could perform better if we use higher quality data. <br>
         </p>
 
         <h4 style="color:darkblue">2. Mapping (embedding) method in rNN models</h4>
         <p class="top15">
-            &nbsp &nbsp In version 2 of RNN model, we can try to use more complicated mapping method to map the 2 inputs into a
+            &nbsp &nbsp In version 2 of RNN model, we can try to use more complicated mapping method to map the 2 inputs
+            into a
             vector.
             Maybe the version2 does not work well since the mapping is too easy.
         </p>
@@ -785,6 +795,8 @@
         MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
         });
+
+
 
 
 
