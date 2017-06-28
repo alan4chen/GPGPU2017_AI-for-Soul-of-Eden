@@ -76,9 +76,9 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading"> Awesome Liao! </h1>
-            <hr>
-            <p> Wei-Chung Liao <br/>The greatest dream lover in the world. </p>
+            <h1 id="homeHeading"> AI for Soul of Eden </h1>
+            <hr class="hr-white">
+            <p> AI for Rayark's “Soul of Eden” <br/> GPU 2017 Final Project <br/> Team 1</p>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
         </div>
     </div>
@@ -87,67 +87,257 @@
 <section class="bg-primary" id="about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Wei-Chung Liao is Single!</h2>
+            <div class="col-lg-8 col-lg-offset-2 ">
+                <h2 class="section-heading text-center">Introduction to the Soul of Eden</h2>
                 <hr class="light">
-                <p class="text-faded"> Do you want a handsome boyfriend? </p>
-                <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                <!--<p class="text-faded">-->
+                <h4 class="text-faded">   ． A real-time strategy mobile card game. <br> </h4>
+                <h4 class="text-faded">   ． Use cards to destroy opposite’s castle. <br> </h4>
+                <h4 class="text-faded">    ． Two main groups and over 150 cards <br> </h4>
+                    <font class="text-faded" color="gray">(containing heros, soldiers, buildings, and magic.) </font> <br>
+                <h4 class="txt-faded">    ． Adopt their strategies for different kinds of situations and win the battle.<br> </h4>
+
+                <p class="text-center">For more details, please refer to <a href="https://www.rayark.com/g/soul_of_eden/" style="color: lightgrey; text-decoration: underline;;">Soul of Eden.</a> </p>
+
+    <!--</p>-->
             </div>
         </div>
     </div>
 </section>
 
-<section id="services">
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Project Goal</h2>
+            <p> Design an AI to play the game. </p>
+            <hr class="hr-white">
+            <h3>3 phases</h3>
+            <div class="col-lg-4">
+            <h4>    Defeat random AI </h4>
+            (which only does a random play).
+            </div>
+            <div class="col-lg-4">
+            <h4>    Defeat simple AI. </h4>
+            (Simple AI: AI designed by statistics method.)
+            </div>
+            <div class="col-lg-4">
+             <h4>   AI can reinforce by self-playing </h4>
+            </div>
+
+        </div>
+    </div>
+</aside>
+
+<section id="rules">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Why choose him?</h2>
+                <h2 class="section-heading">Basic Game Rules</h2>
                 <hr class="primary">
             </div>
         </div>
     </div>
+
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                    <h3>Rich</h3>
-                    <p class="text-muted">Richest man in Taipei.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                    <h3>Initiative</h3>
-                    <p class="text-muted">The main leader in Deep Learning Research.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                    <h3>Faithful</h3>
-                    <p class="text-muted">He says what he means.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                    <h3>Passionate</h3>
-                    <p class="text-muted"> Ready to fall in love!</p>
-                </div>
-            </div>
+        <div class="col-lg-10 col-lg-offset-1 row">
+            <p>
+                &nbsp &nbsp The original game is complicated. Since our main goal is to show our AI’s feasibility, we <b>simplify the game</b>.
+                The simplified game is as following.
+            </p>
+
+            <p>
+                &nbsp&nbsp In the given time, players need to destory the opposite’s castle. There are 3 kinds of cards in the game.
+                For every 4 seconds, each player should choose one kind of cards to play. After playing 30 cards,
+                the players stop playing cards and wait for the final result. The one who destroy the opposite’s castle wins the game.
+                If none of the castles is destroyed in the time limits, the game is considered to be draw.
+            </p>
+            <p class="text-center">
+            <img src="img/game.jpg" style="width:250px">
+            </p>
         </div>
     </div>
+
+    <hr class="gray">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-1 text-center">
+                <h3>
+                    Time Limit
+                </h3>
+                <p>
+                    240 seconds
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <h3>
+                    Number of Cards
+                </h3>
+                <font color="darkgray">    (each player can play in a round) </font>
+                <p>
+                    30
+                </p>
+            </div>
+
+            <div class="col-lg-3 text-center">
+                <h3>
+                    Castle
+                </h3>
+                <p>
+                    2800HP <br/>
+                     <font color="#696969"> Medium Attack power <br/>
+                    Fast Attack speed.</font>
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h3>
+            Types of Card
+            </h3>
+            <!--<p> (Card positions : player0 : 0~24, player1 : 25~49) </p>-->
+            <div class="col-lg-4 text-center">
+                <h4>
+                    <b> Tank </b>
+                </h4>
+                                <img src="img/a2.jpg" style="width:70px"> <br>
+                <p>
+                    621HP <br />
+                    <font color="#696969">
+                    Low attack damage <br>
+                    Block the attack from the enemy’s archer
+                    </font>
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center">
+
+                <h4>
+                    <b>Archer</b>
+                </h4>
+                <img src="img/a3.jpg" style="width:70px"> <br>
+                <p>
+                    162HP <br><font color="#696969"> Medium attack damage <br> The main attacker in the game, <br> usually protected by tanks</font>
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <h4>
+                    <b>Assassin</b>
+                </h4>
+                <img src="img/a1.jpg" style="width:70px"> <br>
+                <p>
+                    162HP <br><font color="#696969"> High attack damage <br>  Assassinate enemy archers. </font>
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="gray">
+
+        <div class="row text-center">
+            <h3> During the game </h3>
+            <p>
+            Each player choose a type of card to play every 4 seconds. <br>
+            Each player should stop playing cards after 120 seconds. <br>
+            The game continues until one of the castles is destroyed or the time limit exceeds.
+            </p>
+        </div>
+
+        <div class="row text-center">
+            <h3> Goal </h3>
+            <p>
+            Destroy the enemy’s castle. <br>
+If none of the castles is destroyed in the time limit, the game is considered to be draw.
+            </p>
+        </div>
+    </div>
+
+
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--<div class="service-box">-->
+                    <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
+                    <!--<h3>Rich</h3>-->
+                    <!--<p class="text-muted">Richest man in Taipei.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--<div class="service-box">-->
+                    <!--<i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>-->
+                    <!--<h3>Initiative</h3>-->
+                    <!--<p class="text-muted">The main leader in Deep Learning Research.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--<div class="service-box">-->
+                    <!--<i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>-->
+                    <!--<h3>Faithful</h3>-->
+                    <!--<p class="text-muted">He says what he means.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-md-6 text-center">-->
+                <!--<div class="service-box">-->
+                    <!--<i class="fa fa-4x fa-heart text-primary sr-icons"></i>-->
+                    <!--<h3>Passionate</h3>-->
+                    <!--<p class="text-muted"> Ready to fall in love!</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </section>
 
-
-<section class="bg-primary" id="Techniques">
+<aside class="bg-iron" id="preprocessing">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading section-heading-white">Techniques</h2>
+                <h2 class="section-heading"> Critical Problems & Solutions</h2>
+                <p>
+                    The engine provided by Rayark can only output the battle field information after the whole game ends. However, to train our AI by the battle field information, we need to have battle field information step by step.
+
+The problem is fatal and cannot be solved since the problem comes from the Rayark engine. Therefore, we decide to modify our algorithm. Instead of training our AI by battle field information, we decide to train our AI by the behaviors of both players. Since the behavior, such that the cards and the positions each player decide, is obtainable step by step, the problem is avoided.
+
+The battle field is very large. There are about 10 millions ×× 10 millions positions in the battle field, making the training very difficult.
+
+To reduce the complexity of training, we divide the battle field into 50 ranges. Each player can put his card on his own territory, which contains 25 ranges. By doing so, we largely reduce our training space from 10 million ×× 10 million to 50.
+
+In a typical RNN model, it takes only one input (in one-hot form) and output the probabilities of next move. However, we would like to consider the opposite’s move as well as our move in the same time.
+
+We solve the problem by mapping the 2 inputs into a vector which has the same shape as the output vector. We build a one-layer NN to map the 2 inputs into a vector. Then, we can use the vector as our input. More details are elaborated in the Model section.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<section class="bg-primary" id="">
+
+    <div class="container">
+        <div class="row">
+            <h2 class="section-heading section-heading-white">Preprocessing</h2>
+        </div>
+    </div>
+    <p>
+        There are 3 kinds of cards we can use and 25 positions we can put. Therefore, a behavior $b$ is formed by the card we use and the position we put. We denote $c \in \{0,1,2\}$ as the card we use and $p \in \{0,1,...,24\}$ as the position we put. Therefore, the behavior $b$ is defined by $b = 3 \times c + p$. Its range is $b \in \{0,1,2,...,74\}$. We then use $b$ as the format of our training data.
+
+    </p>
+</section>
+
+
+
+<aside class="bg-dark" id="techniques">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading section-heading-white">Model</h2>
                 <hr class="hr-white">
-                <p class="text-faded"> Liao's 3 golds make you pleasant at night.</p>
+                <p class="text-faded">
+                    There are 3 kinds of cards we can use and 25 positions we can put. Therefore, a behavior $b$ is formed by the card we use and the position we put. We denote $c \in \{0,1,2\}$ as the card we use and $p \in \{0,1,...,24\}$ as the position we put. Therefore, the behavior $b$ is defined by $b = 3 \times c + p$. Its range is $b \in \{0,1,2,...,74\}$. We then use $b$ as the format of our training data.
+                </p>
             </div>
         </div>
 
@@ -158,13 +348,15 @@
                          data-parent="#accordion" href="#collapseOne"
                          aria-expanded="true" aria-controls="collapseOne">
                         <h4 class="panel-title">
-                            Gold Fingers
+                            Random Model
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
                          aria-labelledby="headingOne" aria-expanded="true">
                         <div class="row top5">
-                            <p class="col-lg-offset-1 black-paragraph">Coding in very fast speed with his fingers.</p>
+                            <p class="col-lg-offset-1 black-paragraph">
+                                Random model decides the card and the position randomly. Here we use uniform random as the random model, which means all cards as well as all positions appear with the same probability.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -174,13 +366,15 @@
                          data-parent="#accordion" href="#collapseTwo"
                          aria-expanded="true" aria-controls="collapseTwo">
                         <h4 class="panel-title">
-                            Gold Eyes
+                            Statistics Model
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"
                          aria-expanded="false">
                         <div class="row top5">
-                            <p class="col-lg-offset-1 black-paragraph"> Debuging in very fast speed with his eyes.</p>
+                            <p class="col-lg-offset-1 black-paragraph">
+                                Denote the losers' behavior as $X$, the winners' behavior as $Y$. Statistics model calculates all $P(Y|X)$ according to training data. Then, for every $x_i \in X$, we pick the behavior $y_j \in Y$ such that $P(y_j|x_i)$ has the highest probability among all $i \in  \{0,1,2,...,74\}$.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -190,89 +384,142 @@
                          href="#collapseThree"
                          aria-expanded="true" aria-controls="collapseThree">
                         <h4 class="panel-title">
-                            Gold Energy
+                            RNN Model ver. 1
                         </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                          aria-labelledby="headingThree" aria-expanded="false">
                         <div class="row top5">
-                            <p class="col-lg-offset-1 black-paragraph">No need sleep at night.</p>
+                            <p class="col-lg-offset-1 black-paragraph">
+                            The model is like the figure.
+
+Our first RNN model takes the opposite's behavior $X$ as input, and our decision behavior $Y$ as output. Note that here $X$ and $Y$ are vectors whose lengths are 151, representing the 150 behaviors and no behavior. There is only one "1" in each vector while others remain "0"s. The index that 1 sits is the number of behavior the vector represents. For example, if the "1" is the 79-th elements in the vector, the vector means $b = 79$. This is called one-hot encoding.
+
+Then, according to the figure, each time we input a vector and a "state," which contains past information, we can get a vector representing the goodness of each behavior. We choose the highest one as our decision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="button" data-toggle="collapse" data-parent="#accordion"
+                         href="#collapseFour"
+                         aria-expanded="true" aria-controls="collapseFour">
+                        <h4 class="panel-title">
+                            RNN Model ver. 2
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingFour" aria-expanded="false">
+                        <div class="row top5">
+                            <p class="col-lg-offset-1 black-paragraph">
+                            The model is like the figure.
+
+The main difference between the version 1 and version 2 is that the version 2 takes both the opposite's behaviors and our behaviors as consideration, while the version 1 only considers the opposite's behavior.
+
+In the Critical Problem section, we have mentioned that typical RNN model only takes 1 behavior as the input. Therefore, to merge the information of both the opposite's behavior and our behavior, we build a 1-layer NN with RELU activation to map the two behaviors into one vector whose length is the same as the output length. Then, take the mapped vectors as inputs, we can get output vectors. Similarly to the version 1, we choose the highest index as our decision.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</aside>
 
 
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+<!--<section class="no-padding" id="portfolio">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row no-gutter popup-gallery">-->
+            <!--<div class="col-lg-4 col-sm-6">-->
+                <!--<a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">-->
+                    <!--<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">-->
+                    <!--<div class="portfolio-box-caption">-->
+                        <!--<div class="portfolio-box-caption-content">-->
+                            <!--<div class="project-category text-faded">-->
+                                <!--Category-->
+                            <!--</div>-->
+                            <!--<div class="project-name">-->
+                                <!--Project Name-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-sm-6">-->
+                <!--<a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">-->
+                    <!--<img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">-->
+                    <!--<div class="portfolio-box-caption">-->
+                        <!--<div class="portfolio-box-caption-content">-->
+                            <!--<div class="project-category text-faded">-->
+                                <!--Category-->
+                            <!--</div>-->
+                            <!--<div class="project-name">-->
+                                <!--Project Name-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4 col-sm-6">-->
+                <!--<a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">-->
+                    <!--<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">-->
+                    <!--<div class="portfolio-box-caption">-->
+                        <!--<div class="portfolio-box-caption-content">-->
+                            <!--<div class="project-category text-faded">-->
+                                <!--Category-->
+                            <!--</div>-->
+                            <!--<div class="project-name">-->
+                                <!--Project Name-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
 
-        </div>
-    </div>
-</section>
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 
 <section id="plot">
     <div class="container ">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading"> Statistics </h2>
+                <h2 class="section-heading"> Results </h2>
                 <hr class="primary">
+            </div>
+        </div>
+
+        <p>
+            We let statistics model and random model play over 3,000 games and the statistics model have more than 80% winning rate, meaning that it is superior than the random model very much.
+
+Then, we let RNN models play with the statistics model. Both of the models choose the best behavior they think as the decision, and therefore the game is deterministic. The result is that all of the RNN models defeat the statistics model, showing that RNN models are better than statistics model.
+
+We also let the two versions of RNN models play with each other. The result shows that
+
+        </p>
+
+        <!--<hr class="gray">-->
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading"> Different Parameter Sets of RNN Models </h3>
+            </div>
+        </div>
+
+        <p> TEXT </p>
+        <!--<hr class="gray">-->
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading"> Learning Curve </h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-7" id="test-plot" style="height:300px;"></div>
             <div class="col-lg-4 col-lg-offset-1 text-center">
-                <h2 class="panel-heading"> People persue him </h2>
-                <p> The number of people persue him increased recently. </p>
+                <p> Observation </p>
             </div>
         </div>
     </div>
@@ -369,10 +616,6 @@
     </div>
 </section>
 
-
-<p> When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$ </p>
-
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.min.js">
 </script>
@@ -404,6 +647,8 @@
         MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
         });
+
+
 
 </script>
 
